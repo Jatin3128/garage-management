@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include garage_management *.css
+recursive-include garage_management *.csv
+recursive-include garage_management *.html
+recursive-include garage_management *.ico
+recursive-include garage_management *.js
+recursive-include garage_management *.json
+recursive-include garage_management *.md
+recursive-include garage_management *.png
+recursive-include garage_management *.py
+recursive-include garage_management *.svg
+recursive-include garage_management *.txt
+recursive-exclude garage_management *.pyc
