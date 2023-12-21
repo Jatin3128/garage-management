@@ -1,0 +1,122 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:SC-{reference_number}-{MM}-{###}",
+ "creation": "2023-12-19 19:25:50.488404",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "reference_number",
+  "column_break_upgq8",
+  "date",
+  "section_break_eja90",
+  "modle",
+  "column_break_eoope",
+  "engine_cc",
+  "section_break_rrom7",
+  "service_item",
+  "qi_ref",
+  "qi_status",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "reference_number",
+   "fieldtype": "Link",
+   "label": "Job Card Reference number",
+   "options": "Job Cards"
+  },
+  {
+   "fieldname": "column_break_upgq8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_eja90",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fetch_from": "reference_number.modle",
+   "fieldname": "modle",
+   "fieldtype": "Data",
+   "label": "Modle"
+  },
+  {
+   "fieldname": "column_break_eoope",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "reference_number.engine_in_cc",
+   "fieldname": "engine_cc",
+   "fieldtype": "Data",
+   "label": "Engine CC"
+  },
+  {
+   "fieldname": "section_break_rrom7",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "service_item",
+   "fieldtype": "Table",
+   "label": "Service Item",
+   "options": "Service Item"
+  },
+  {
+   "fieldname": "qi_ref",
+   "fieldtype": "Link",
+   "label": "QI Ref",
+   "options": "Quality Inspection"
+  },
+  {
+   "fetch_from": "qi_ref.overall_rating",
+   "fieldname": "qi_status",
+   "fieldtype": "Data",
+   "label": "QI Status"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Service Card",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-12-22 02:06:43.024112",
+ "modified_by": "Administrator",
+ "module": "Garage Management",
+ "name": "Service Card",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

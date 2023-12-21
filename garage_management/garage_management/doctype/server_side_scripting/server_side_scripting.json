@@ -1,0 +1,207 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:SER-{###}",
+ "creation": "2023-12-20 15:38:36.010067",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "customer_name",
+  "customer_contact",
+  "column_break_tprgs",
+  "date",
+  "delivery_date",
+  "section_break_be7d5",
+  "modle",
+  "company_name",
+  "column_break_9tthk",
+  "number_plate",
+  "engine_in_cc",
+  "section_break_ddvbl",
+  "last_service_number",
+  "service_card_refernce_number",
+  "column_break_gwzrq",
+  "last_service_date",
+  "section_break_pbzsz",
+  "job_item",
+  "section_break_actuc",
+  "column_break_094ag",
+  "total_amount",
+  "advance_amount",
+  "paid_amount",
+  "amended_from",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "customer_name",
+   "fieldtype": "Data",
+   "label": "Customer Name"
+  },
+  {
+   "fieldname": "customer_contact",
+   "fieldtype": "Data",
+   "label": "Customer Contact",
+   "options": "Phone"
+  },
+  {
+   "fieldname": "column_break_tprgs",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "delivery_date",
+   "fieldtype": "Data",
+   "label": "Delivery Date"
+  },
+  {
+   "fieldname": "section_break_be7d5",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "modle",
+   "fieldtype": "Data",
+   "label": "Modle"
+  },
+  {
+   "fieldname": "company_name",
+   "fieldtype": "Data",
+   "label": "Company Name"
+  },
+  {
+   "fieldname": "column_break_9tthk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "number_plate",
+   "fieldtype": "Data",
+   "label": "Number Plate"
+  },
+  {
+   "fieldname": "engine_in_cc",
+   "fieldtype": "Data",
+   "label": "Engine in CC"
+  },
+  {
+   "fieldname": "section_break_ddvbl",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "last_service_number",
+   "fieldtype": "Link",
+   "label": "Last Service Number",
+   "options": "Job Cards"
+  },
+  {
+   "fieldname": "service_card_refernce_number",
+   "fieldtype": "Link",
+   "label": "Service Card Refernce Number",
+   "no_copy": 1,
+   "options": "Service Card",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_gwzrq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "last_service_number.date",
+   "fieldname": "last_service_date",
+   "fieldtype": "Data",
+   "label": "Last Service Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_pbzsz",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "job_item",
+   "fieldtype": "Table",
+   "label": "Job Item",
+   "options": "Job Item"
+  },
+  {
+   "fieldname": "section_break_actuc",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_094ag",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_amount",
+   "fieldtype": "Float",
+   "label": "Total Amount",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "fieldname": "advance_amount",
+   "fieldtype": "Float",
+   "label": "Advance Amount",
+   "precision": "3"
+  },
+  {
+   "fieldname": "paid_amount",
+   "fieldtype": "Float",
+   "label": "Paid Amount",
+   "precision": "3"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Job Cards",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Server SIde Scripting",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-12-20 15:38:36.010067",
+ "modified_by": "Administrator",
+ "module": "Garage Management",
+ "name": "Server SIde Scripting",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

@@ -1,0 +1,145 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-12-21 01:11:34.568323",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "job_reference_number",
+  "column_break_dsa3f",
+  "service_reference_number",
+  "section_break_qz3sp",
+  "customer_name",
+  "column_break_ml4ad",
+  "modle",
+  "number_plate",
+  "section_break_cgyvl",
+  "service_complition_date",
+  "section_break_9m1hl",
+  "inspection_details",
+  "section_break_gyvek",
+  "overall_rating",
+  "column_break_0qdnp",
+  "remarks",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "job_reference_number",
+   "fieldtype": "Link",
+   "label": "Job Reference Number",
+   "options": "Job Cards"
+  },
+  {
+   "fieldname": "column_break_dsa3f",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "service_reference_number",
+   "fieldtype": "Data",
+   "label": "Service Reference Number"
+  },
+  {
+   "fieldname": "section_break_qz3sp",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fetch_from": "job_reference_number.customer_name",
+   "fieldname": "customer_name",
+   "fieldtype": "Data",
+   "label": "Customer Name"
+  },
+  {
+   "fieldname": "column_break_ml4ad",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "job_reference_number.modle",
+   "fieldname": "modle",
+   "fieldtype": "Data",
+   "label": "Modle "
+  },
+  {
+   "fetch_from": "job_reference_number.number_plate",
+   "fieldname": "number_plate",
+   "fieldtype": "Data",
+   "label": "Number Plate"
+  },
+  {
+   "fieldname": "section_break_cgyvl",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "now",
+   "fieldname": "service_complition_date",
+   "fieldtype": "Datetime",
+   "label": "Service Complition Date "
+  },
+  {
+   "fieldname": "inspection_details",
+   "fieldtype": "Table",
+   "label": "Inspection Details",
+   "options": "inspection Details"
+  },
+  {
+   "fieldname": "overall_rating",
+   "fieldtype": "Data",
+   "label": "Overall Rating "
+  },
+  {
+   "fieldname": "column_break_0qdnp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Small Text",
+   "label": "Remarks"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Quality Inspection",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "section_break_9m1hl",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_gyvek",
+   "fieldtype": "Section Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-12-22 03:16:46.318970",
+ "modified_by": "Administrator",
+ "module": "Garage Management",
+ "name": "Quality Inspection",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

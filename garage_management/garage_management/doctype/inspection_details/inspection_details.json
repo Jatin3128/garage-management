@@ -1,0 +1,76 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-12-21 01:40:21.580430",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "parameter",
+  "rating_1",
+  "rating_2",
+  "average_rating",
+  "status",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "parameter",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Parameter",
+   "options": "Parameter"
+  },
+  {
+   "fieldname": "rating_1",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Rating 1",
+   "precision": "2"
+  },
+  {
+   "fieldname": "rating_2",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Rating 2",
+   "precision": "3"
+  },
+  {
+   "fieldname": "average_rating",
+   "fieldtype": "Float",
+   "label": "Average Rating",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Status",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "inspection Details",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-12-21 13:41:52.979815",
+ "modified_by": "Administrator",
+ "module": "Garage Management",
+ "name": "inspection Details",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
