@@ -76,7 +76,6 @@
    "options": "Quality Inspection"
   },
   {
-   "fetch_from": "qi_ref.overall_rating",
    "fieldname": "qi_status",
    "fieldtype": "Data",
    "label": "QI Status"
@@ -95,7 +94,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-12-22 02:06:43.024112",
+ "modified": "2023-12-22 17:22:53.322364",
  "modified_by": "Administrator",
  "module": "Garage Management",
  "name": "Service Card",

@@ -1,6 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "format:QI-{service_reference_number}",
  "creation": "2023-12-21 01:11:34.568323",
  "default_view": "List",
  "doctype": "DocType",
@@ -119,10 +120,11 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-12-22 03:16:46.318970",
+ "modified": "2023-12-22 16:52:26.180006",
  "modified_by": "Administrator",
  "module": "Garage Management",
  "name": "Quality Inspection",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {

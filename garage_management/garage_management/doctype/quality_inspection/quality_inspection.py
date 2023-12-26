@@ -27,8 +27,16 @@ class QualityInspection(Document):
 					row.status = 0
 			# frappe.throw(f"{numRows}")
 		if count >= numRows/2:
-			# frappe.db.set_value('Quality Inspection', 'overall_rating', "Passed")
+		# frappe.db.set_value('Quality Inspection', 'overall_rating', "Passed")
 			self.overall_rating = "Passed"
+		else: 
+			self.overall_rating = "Rejected"
+	def on_update(self):
+		frappe.db.set_value('Service Card', self.name, 'qi_status', self.overall_rating)
+
+	
+		# frappe.thmsgprint(f"{self.workflow_state}")
+		if self.workflow_state ==
 	
 
 			
