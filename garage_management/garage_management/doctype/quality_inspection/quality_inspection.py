@@ -25,18 +25,30 @@ class QualityInspection(Document):
 					count +=1
 				else:
 					row.status = 0
+			if count >= numRows/2:
+		# frappe.db.set_value('Quality Inspection', 'overall_rating', "Passed")
+				self.state = "Passed"
+			elif count< numRows/2: 
+				self.state = "Rejected"
 			# frappe.throw(f"{numRows}")
-		if count >= numRows/2:
+	def before_submit(self):
+		if self.state == "Passed":
 		# frappe.db.set_value('Quality Inspection', 'overall_rating', "Passed")
 			self.overall_rating = "Passed"
 		else: 
 			self.overall_rating = "Rejected"
 	def on_update(self):
-		frappe.db.set_value('Service Card', self.name, 'qi_status', self.overall_rating)
-
+		frappe.db.set_value('Service Card', self.service_reference_number, 'qi_status', self.overall_rating)
+		if self.overall_rating == "Passed":
+			frappe.set_value('Service Card', self.service_reference_number, 'workflow_state', 'Approved')
+			frappe.set_value('Job Cards', self.job_reference_number, 'delivery_date', self.service_complition_date)
+			frappe.set_value('Job Cards', self.job_reference_number, 'workflow_state', 'submitted')
+		elif self.overall_rating == "Rejected":
+			frappe.set_value('Service Card', self.service_reference_number, 'workflow_state', 'Rejected')
 	
 		# frappe.thmsgprint(f"{self.workflow_state}")
-		if self.workflow_state ==
+		if self.workflow_state == "rejected":
+			pass
 	
 
 			

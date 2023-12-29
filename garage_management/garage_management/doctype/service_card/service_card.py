@@ -25,7 +25,7 @@ class ServiceCard(Document):
 			# frappe.throw(f"{item_type_parameter}")
 			inspection_item = []
 			for key,value in item_type_parameter.items():
-				for parameter in value:
+				for parameter in value:	
 					parameter_dict = {}
 					parameter_dict["parameter"] = parameter
 					inspection_item.append(parameter_dict)
@@ -42,4 +42,6 @@ class ServiceCard(Document):
 			qi_doc.insert()
 			# self.qi_ref = qi_doc.name
 			frappe.db.set_value('Service Card', self.name, 'qi_ref', qi_doc.name)
+	
+
 

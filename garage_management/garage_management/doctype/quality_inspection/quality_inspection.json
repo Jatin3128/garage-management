@@ -24,6 +24,7 @@
   "overall_rating",
   "column_break_0qdnp",
   "remarks",
+  "state",
   "amended_from"
  ],
  "fields": [
@@ -115,12 +116,18 @@
   {
    "fieldname": "section_break_gyvek",
    "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "state",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "state"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-12-22 16:52:26.180006",
+ "modified": "2023-12-28 20:02:34.809982",
  "modified_by": "Administrator",
  "module": "Garage Management",
  "name": "Quality Inspection",
